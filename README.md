@@ -47,10 +47,17 @@ Cost estimate:
 
 ---
 
-## ✍️ How to Customize For Your Own Petition
+# ✍️ How to Customize for Your Own Petition
 
-You must hardcode your own petition's strengths inside the script.  
-In `process_eb2niw_prongs_compare.py`, update the following dictionary:
+Before running the script, you need to **tell the program what your own EB2-NIW petition looks like**.
+
+You do this by **editing** the following part of `process_eb2niw_prongs_compare.py`:
+
+---
+
+## 📋 Where to Edit in the Script
+
+In the beginning of the script, you will find this block:
 
 ```python
 my_case = {
@@ -60,7 +67,72 @@ my_case = {
 }
 ```
 
-👉 Use simple, 1-2 sentence summary for each prong based on your own EB2-NIW petition.
+You need to **replace the example texts** with **short 1–2 sentence summaries** based on your real EB2-NIW petition.
+
+---
+
+## 🧠 Example 1: Generic STEM Professional 
+
+```python
+my_case = {
+    "Prong1": "Strong: working on cutting-edge technology aligned with U.S. innovation goals.",
+    "Prong2": "5+ years professional experience in major U.S. organizations, demonstrated leadership roles.",
+    "Prong3": "Immediate contribution to national innovation efforts; delay would harm competitiveness."
+}
+```
+
+---
+
+## 🧪 Example 2: AI Researcher (Machine Learning for Healthcare)
+
+```python
+my_case = {
+    "Prong1": "Strong: Research directly improves U.S. healthcare outcomes using AI for early disease detection.",
+    "Prong2": "4+ years leading projects at a top U.S. university hospital and multiple published papers.",
+    "Prong3": "Immediate healthcare application; delay would risk public health improvements."
+}
+```
+
+---
+
+## 💼 Example 3: Finance Professional (Economic Policy Advisor)
+
+```python
+my_case = {
+    "Prong1": "Strong: Directly advising U.S. state governments on economic policy initiatives.",
+    "Prong2": "8 years of leadership roles in U.S. think tanks, direct policy impact proven.",
+    "Prong3": "Delay would harm ongoing critical public sector projects; immediate national impact needed."
+}
+```
+
+# ⚡ Tips for Writing Your Own Prongs:
+
+- Be short (1–2 sentences max)
+- Be direct: mention **U.S. impact**, **leadership**, **urgency**
+- Match the style you would use in your NIW petition or recommendation letters
+- No need to write full essays — this is just for automated comparison.
+
+---
+
+✅ This will make your script work correctly for *your unique situation*!
+
+---
+
+# 📋 Updated Table of Contents for README
+
+Now your README will have these sections clearly:
+
+| Section | Description |
+|:---|:---|
+| Installation | How to install packages |
+| OpenAI API Setup | How to get an API key |
+| How to Customize Petition | How to add your own Prongs (with examples) |
+| Running the Script | How to run batch |
+| Output | What CSV will include |
+| Notes | Future improvements |
+| Contribute | Open for pull requests |
+
+---
 
 ---
 
