@@ -118,24 +118,6 @@ my_case = {
 
 ---
 
-# 📋 Updated Table of Contents for README
-
-Now your README will have these sections clearly:
-
-| Section | Description |
-|:---|:---|
-| Installation | How to install packages |
-| OpenAI API Setup | How to get an API key |
-| How to Customize Petition | How to add your own Prongs (with examples) |
-| Running the Script | How to run batch |
-| Output | What CSV will include |
-| Notes | Future improvements |
-| Contribute | Open for pull requests |
-
----
-
----
-
 ## 📄 Output
 
 The script will generate a file called `summary_prongs_comparison.csv` with the following columns:
