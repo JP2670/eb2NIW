@@ -43,7 +43,7 @@ openai.api_key = "your-api-key-here"
 **⚡ Important:** You will need to add a small amount of balance ($5–$10) to your OpenAI account to run this full project.
 
 Cost estimate:
-- Around **$20–$23** to process ~7,800 PDFs using GPT-4o-mini model (April 2025 prices).
+- Around **$30–$40** to process ~7,700 PDFs using GPT-4o-mini model (April 2025 prices).
 
 ---
 
