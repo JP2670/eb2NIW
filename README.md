@@ -19,7 +19,7 @@ You can automatically **compare your case against 7,800+ real AAO decisions**!
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/niw_case_comparator.git
+git clone https://github.com/JP2670/eb2NI.git
 cd niw_case_comparator
 pip install -r requirements.txt
 ```
