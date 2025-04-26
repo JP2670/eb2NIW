@@ -1,22 +1,22 @@
 # EB2-NIW Petition Case Comparator 🚀
 
-This Python script reads USCIS AAO decision PDFs, extracts the main reasons for denial (3 NIW prongs), and **compares** them **side-by-side** with your own EB2-NIW petition strengths.
+This Python script reads USCIS AAO decision PDFs, extracts the main reasons for denial (for the 3 NIW prongs), and **compares** each case **side-by-side** with your own EB2-NIW petition strengths.
 
-You can analyze thousands of cases and see **how your petition compares**!
-
----
-
-## Features
-
-- Scrape USCIS PDF decision documents
-- Use OpenAI GPT-4o or 4o-mini model to summarize NIW prong issues
-- Compare each prong (Prong 1, Prong 2, Prong 3) to your own petition
-- Batch mode (process 50 cases at a time)
-- Output clean CSV file for easy review
+You can automatically **compare your case against 7,800+ real AAO decisions**!
 
 ---
 
-## Installation
+## 📦 Features
+
+- Scrape USCIS AAO PDF decision documents
+- Use OpenAI GPT-4o model to summarize NIW prong failure reasons
+- Compare each decision to your own petition
+- Batch processing for thousands of PDFs
+- Clean CSV file output for easy review
+
+---
+
+## ⚙️ Installation
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/niw_case_comparator.git
@@ -26,39 +26,79 @@ pip install -r requirements.txt
 
 ---
 
-## How to Use
+## 🔑 Setting Up OpenAI API Access
 
-1. Prepare a `Master_file` — a simple text file with 1 PDF link per line.
-2. Set your `OpenAI API key` inside the script.
-3. Set `start_line` and `end_line` inside the script to pick which links to process.
-4. Run the script:
+This script uses OpenAI GPT-4o model.  
+You need an OpenAI API key to use it.
 
-```bash
-python process_eb2niw_prongs_compare.py
+- Signup for free at: [https://platform.openai.com/signup](https://platform.openai.com/signup)
+- After signup, go to [API Keys page](https://platform.openai.com/account/api-keys)
+- Click **Create New Secret Key** and copy it
+- Paste your API key inside the Python script here:
+
+```python
+openai.api_key = "your-api-key-here"
 ```
 
-After processing, you will get `summary_prongs_comparison.csv` file.
+**⚡ Important:** You will need to add a small amount of balance ($5–$10) to your OpenAI account to run this full project.
+
+Cost estimate:
+- Around **$20–$23** to process ~7,800 PDFs using GPT-4o-mini model (April 2025 prices).
 
 ---
 
-## Notes
+## ✍️ How to Customize For Your Own Petition
 
-- You need OpenAI API key (GPT-4o model)
-- Costs approximately ~$23 to process ~7,800 PDFs (very affordable)
-- Script automatically handles batch saving and slow server response
-- Works perfectly on Mac, Linux, and Windows
+You must hardcode your own petition's strengths inside the script.  
+In `process_eb2niw_prongs_compare.py`, update the following dictionary:
+
+```python
+my_case = {
+    "Prong1": "Summarize why your National Importance is strong",
+    "Prong2": "Summarize why you are Well Positioned",
+    "Prong3": "Summarize why Labor Waiver is justified for you"
+}
+```
+
+👉 Use simple, 1-2 sentence summary for each prong based on your own EB2-NIW petition.
 
 ---
 
-## License
+## 📄 Output
 
-Open-source for educational and personal use.  
-Please respect USCIS terms and public data usage.
+The script will generate a file called `summary_prongs_comparison.csv` with the following columns:
+
+| Column | Description |
+|:---|:---|
+| PDF Link | Link to original AAO decision |
+| Prong 1 Reason | Why Prong 1 failed for that case |
+| Prong 2 Reason | Why Prong 2 failed |
+| Prong 3 Reason | Why Prong 3 failed |
+| Prong 1 Verdict | Your case stronger / Mixed |
+| Prong 2 Verdict | Your case stronger / Mixed |
+| Prong 3 Verdict | Your case stronger / Mixed |
+| Final Verdict | Overall assessment: Stronger / Mixed |
 
 ---
 
-# ❤️ Contribution
+## 🛠 Notes
 
-If you improve the script (like adding resume feature or auto-pdf downloaders), feel free to make Pull Requests!
+- The Master_file provided contains over 7,800 AAO decision PDF links (as of April 2025).
+- Some non-EB2-NIW cases are mixed in (e.g., EB-1, EB-3) — filtering is a future update.
+- The script automatically detects non-NIW cases and marks them.
+- For 'mixed' verdict cases, you can manually check the PDF links to make your own detailed judgment.
+- You can even use the PDF link with ChatGPT to create deeper comparisons with your petition if needed.
+
+---
+
+## ❤️ Contribute
+
+Pull requests, improvements, and feature ideas are welcome!
+
+---
+
+# 📜 License
+
+Open-source for personal and educational use.
 
 ---
