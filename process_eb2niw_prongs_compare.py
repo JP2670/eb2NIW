@@ -14,7 +14,8 @@ model_name = "gpt-4o"
 batch_size = 50
 sleep_time = 10
 start_line = 1  # <-- Change here: starting line number (1-indexed)
-end_line = 7700  # <-- Change here: ending line number (inclusive)
+end_line = 7700  # <-- Change here: ending line number (inclusive), I would first run a trial with 10 cases.
+#7700 cases will take some time, start with a smaller number initially.
 
 # Your petition details hardcoded
 my_case = {
